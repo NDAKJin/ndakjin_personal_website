@@ -7,9 +7,14 @@ NDAKJin 的个人主页，展示个人项目、ICPC 参赛成绩、兴趣与联�
 - [Astro](https://astro.build/)
 - 静态 HTML / CSS
 
+## 环境要求
+
+- Node.js `v24.19.0`
+- npm `11.18.0`
+
 ## 本地启动
 
-请先安装当前 LTS 版本的 Node.js，然后执行：
+请先安装上述版本的 Node.js，然后执行：
 
 ```bash
 npm install
