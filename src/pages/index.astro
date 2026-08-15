@@ -1,0 +1,107 @@
+---
+const projects = [
+  { number: '01', title: 'Travel Agent', description: 'An AI assistant and operations platform for travel: conversations, itinerary planning, and nearby places.', stack: ['Java 21', 'Spring AI', 'React'], color: 'coral', url: 'https://github.com/NDAKJin/travel-agent' },
+  { number: '02', title: 'In progress', description: 'More personal projects are on the way.', stack: ['In progress'], color: 'lime', url: '#projects' },
+];
+
+const awards = [
+  { year: '2026', event: 'ICPC Provincial Contest', prize: 'Silver Medal', medal: 'SILVER', tone: 'silver', url: 'https://board.xcpcio.com/provincial-contest/2026/jiangsu' },
+  { year: '2025', event: 'ICPC Regional Contest', prize: 'Bronze Medal', medal: 'BRONZE', tone: 'bronze', url: 'https://board.xcpcio.com/icpc/50th/shenyang' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="NDAKJin's personal site and open-source projects." />
+    <title>NDAKJin / engineer &amp; learner</title>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header shell">
+      <a class="wordmark" href="/" aria-label="Back to home"><strong>NDAKJin</strong></a>
+      <nav aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#interests">Interests</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero shell" id="about">
+        <div class="hero-copy">
+          <p class="eyebrow"><i></i> SOFTWARE ENGINEER</p>
+          <h1>Make things<br /><em>worth keeping.</em></h1>
+          <p class="hero-intro">Personal projects, ICPC contests, and open-source work.</p>
+          <div class="hero-actions">
+            <a class="button button-primary project-cta" href="#projects">View my projects <span>↓</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <span class="art-label label-top">ICPC / JIANGSU</span><span class="art-label label-bottom">TRAVEL AGENT / 2026</span>
+        </div>
+      </section>
+
+      <div class="ticker" aria-label="Personal updates"><div class="ticker-inner"><span>✳ ICPC CONTESTANT — 2026 SILVER</span><span>✳ BUILDING — TRAVEL AGENT</span><span>✳ LIVERPOOL FC — YOU'LL NEVER WALK ALONE</span></div></div>
+
+      <section class="section shell" id="projects">
+        <div class="section-heading"><div><p class="eyebrow">PERSONAL PROJECTS <span>✳</span></p><h2>My projects<br /><em>&amp; practice.</em></h2></div><span class="section-index">01 / 03</span></div>
+        <div class="project-grid">
+          {projects.map((project) => <a class={`project-card ${project.color}`} href={project.url} target={project.url.startsWith('http') ? '_blank' : undefined} rel={project.url.startsWith('http') ? 'noreferrer' : undefined}><div class="card-top"><span>{project.number}</span><span>↗</span></div><div><h3>{project.title}</h3><p>{project.description}</p></div><div class="stack">{project.stack.map((item) => <span>{item}</span>)}</div></a>)}
+          <article class="project-card archive"><div class="card-top"><span>03</span><span>↗</span></div><div><h3>GitHub<br />NDAKJin</h3><p>More open-source projects and code.</p></div><div class="archive-arrow">→</div></article>
+        </div>
+      </section>
+
+      <section class="section awards-section shell" id="awards">
+        <div class="section-heading"><div><p class="eyebrow">COMPETITIVE PROGRAMMING <span>✳</span></p><h2>ICPC<br /><em>results.</em></h2></div><span class="section-index">02 / 03</span></div>
+        <div class="award-grid">
+          {awards.map((award) => <a class={`award-card ${award.tone}`} href={award.url} target={award.url ? '_blank' : undefined} rel={award.url ? 'noreferrer' : undefined}><div class="medal-icon" aria-hidden="true"><i>✦</i></div><span class="award-code">ICPC / {award.year}</span><p>{award.event}</p><h3>{award.prize}</h3><span class="award-medal">{award.medal}</span></a>)}
+        </div>
+      </section>
+
+      <section class="section interests-section shell" id="interests">
+        <div class="section-heading"><div><p class="eyebrow">PERSONAL INTERESTS <span>✳</span></p><h2>Beyond<br /><em>the code.</em></h2></div><span class="section-index">03 / 03</span></div>
+        <div class="interest-grid">
+          <article><span class="interest-crest" aria-hidden="true"></span><span class="interest-number">01</span><h3>Liverpool<br />FC</h3><p>You'll Never Walk Alone.</p></article>
+          <article><svg class="interest-gamepad" viewBox="0 0 180 260" aria-hidden="true"><rect x="20" y="8" width="140" height="244" rx="31" fill="currentColor" /><rect x="40" y="31" width="100" height="77" rx="12" fill="#101110" opacity=".85" /><rect x="49" y="40" width="82" height="59" rx="7" fill="currentColor" opacity=".23" /><path d="M48 153h35M65.5 135.5v35" stroke="#101110" stroke-width="11" stroke-linecap="round" /><circle cx="118" cy="147" r="11" fill="#101110" /><circle cx="137" cy="166" r="11" fill="#101110" /><path d="M79 207h22" stroke="#101110" stroke-width="8" stroke-linecap="round" /><path d="M112 207h22" stroke="#101110" stroke-width="8" stroke-linecap="round" /><circle cx="91" cy="226" r="5" fill="#101110" opacity=".65" /></svg><span class="interest-number">02</span><h3>Games &amp;<br />play</h3><p>Exploring, competing, and enjoying virtual worlds.</p></article>
+          <article><svg class="interest-goboard" viewBox="0 0 200 200" aria-hidden="true"><rect x="18" y="18" width="164" height="164" rx="18" fill="currentColor" /><g stroke="#101110" stroke-width="5" opacity=".75"><path d="M48 38v124M79 38v124M110 38v124M141 38v124M38 48h124M38 79h124M38 110h124M38 141h124" /></g><g fill="#101110"><circle cx="79" cy="79" r="15" /><circle cx="141" cy="110" r="15" /><circle cx="110" cy="141" r="15" /></g><g fill="currentColor" stroke="#101110" stroke-width="4"><circle cx="110" cy="79" r="15" /><circle cx="79" cy="110" r="15" /></g></svg><span class="interest-number">03</span><h3>Go</h3><p>Thinking across the board, one move at a time.</p></article>
+        </div>
+      </section>
+
+      <section class="closing shell"><p class="eyebrow">CONTACT NDAKJIN <span>✳</span></p><h2>Let's stay<br /><em>in touch.</em></h2><div class="closing-links"><a href="mailto:ndakjin@qq.com">ndakjin@qq.com <span>↗</span></a><a href="https://github.com/NDAKJin" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a href="https://codeforces.com/profile/NDAKJin" target="_blank" rel="noreferrer">Codeforces <span>↗</span></a></div></section>
+    </main>
+
+    <footer class="site-footer shell"><span>© 2026 NDAKJin</span></footer>
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Serif+SC:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap');
+  :global(*) { box-sizing: border-box; }
+  :global(html) { scroll-behavior: smooth; }
+  :global(body) { margin: 0; background: #101110; color: #f2f0e8; font-family: 'Outfit', sans-serif; }
+  :global(a) { color: inherit; text-decoration: none; }
+  .grain { position: fixed; inset: 0; opacity: .04; pointer-events: none; z-index: 4; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E"); }
+  .shell { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+  .site-header { height: 90px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #2d302b; font: 12px 'DM Mono', monospace; letter-spacing: .05em; }
+  .wordmark { letter-spacing: .16em; }.wordmark strong { font-size: 13px; }
+  nav { display: flex; gap: 30px; color: #95998e; } nav a { transition: color .2s; } nav a:hover { color: #d8f06a; }
+  .hero { min-height: 660px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 5vw; }.eyebrow { color: #969b8e; font: 11px 'DM Mono', monospace; letter-spacing: .13em; }.eyebrow i { display: inline-block; width: 6px; height: 6px; margin: 0 9px 1px 0; border-radius: 50%; background: #d8f06a; }.eyebrow span { color: #d8f06a; margin-left: 9px; }
+  h1, h2, h3, p { margin-top: 0; } h1, h2 { margin-bottom: 27px; font-size: clamp(54px, 7.3vw, 104px); line-height: .91; letter-spacing: -.07em; font-weight: 600; } h1 em, h2 em { color: #d8f06a; font-style: normal; } .hero-intro { max-width: 390px; color: #a9ada2; font-size: 16px; line-height: 1.65; }
+  .hero-actions { display: flex; align-items: center; gap: 27px; margin-top: 37px; }.button { display: inline-flex; align-items: center; gap: 31px; padding: 15px 18px; font: 11px 'DM Mono', monospace; letter-spacing: .04em; }.button-primary { color: #101110; background: #d8f06a; transition: transform .2s, background .2s; }.button-primary:hover { transform: translateY(-3px); background: #efffa4; }.button span { font-size: 18px; }.text-link { color: #f2f0e8; font: 12px 'DM Mono', monospace; border-bottom: 1px solid #5c6158; padding-bottom: 5px; }.text-link span { color: #d8f06a; margin-left: 8px; }
+  .hero-art { position: relative; height: 450px; }.orbit { position: absolute; border: 1px solid #3b4236; border-radius: 50%; transform: rotate(-28deg); }.orbit-one { inset: 14% 4% 15% 9%; }.orbit-two { inset: 5% 16% 28% 0; transform: rotate(54deg); border-color: #536247; }.art-label { position: absolute; color: #72796e; font: 10px 'DM Mono'; letter-spacing: .1em; }.label-top { top: 18%; right: 0; }.label-bottom { bottom: 22%; left: 0; }
+  .ticker { overflow: hidden; border-block: 1px solid #2d302b; color: #d8f06a; font: 11px 'DM Mono'; letter-spacing: .1em; white-space: nowrap; }.ticker-inner { display: flex; justify-content: space-around; min-width: 950px; padding: 15px 0; }
+  .section { padding-block: 140px 50px; }.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 47px; }.section-heading h2 { font-size: clamp(48px, 6vw, 82px); margin-bottom: 0; }.section-index { color: #676c62; font: 11px 'DM Mono'; padding-bottom: 9px; }.project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }.project-card { min-height: 300px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; color: #101110; }.project-card.coral { background: #f18a68; }.project-card.lime { background: #d8f06a; }.project-card.archive { background: #20241f; color: #f2f0e8; }.card-top { display: flex; justify-content: space-between; font: 12px 'DM Mono'; }.project-card h3 { margin-bottom: 11px; font-size: 38px; letter-spacing: -.06em; }.project-card p { max-width: 235px; margin-bottom: 0; font-size: 14px; line-height: 1.45; }.stack { display: flex; gap: 6px; }.stack span { padding: 5px 8px; border: 1px solid #10111066; font: 10px 'DM Mono'; }.archive .stack span { border-color: #f2f0e866; }.archive-arrow { font-size: 42px; color: #d8f06a; }
+  .awards-section { padding-top: 130px; }.award-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }.award-card { position: relative; min-height: 330px; overflow: hidden; padding: 27px; border: 1px solid #41463d; border-radius: 24px; background: #1a1d19; }.award-card::after { content: ''; position: absolute; right: -60px; bottom: -105px; width: 230px; height: 230px; border: 1px solid currentColor; border-radius: 50%; opacity: .16; }.award-card.silver { color: #e5e8df; }.award-card.bronze { color: #f18a68; }.medal-icon { position: relative; display: grid; place-items: center; width: 94px; height: 112px; margin-bottom: 34px; }.medal-icon::before, .medal-icon::after { content: ''; position: absolute; top: 0; width: 33px; height: 69px; background: currentColor; opacity: .85; clip-path: polygon(0 0, 100% 0, 84% 100%, 50% 78%, 16% 100%); }.medal-icon::before { left: 14px; transform: rotate(-9deg); }.medal-icon::after { right: 14px; transform: rotate(9deg); }.medal-icon i { position: absolute; bottom: 0; z-index: 1; display: grid; place-items: center; width: 69px; height: 69px; border: 2px solid currentColor; border-radius: 50%; background: #1a1d19; color: currentColor; font-size: 25px; font-style: normal; }.award-code, .award-medal { font: 11px 'DM Mono'; letter-spacing: .1em; }.award-card p { max-width: 290px; margin: 12px 0 7px; color: #adb2a7; font: 12px 'DM Mono'; line-height: 1.55; }.award-card h3 { margin: 0; color: #f2f0e8; font-size: 43px; letter-spacing: -.06em; }.award-medal { position: absolute; right: 27px; bottom: 26px; opacity: .72; }
+  .interests-section { padding-top: 130px; }.interest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }.interest-grid article { position: relative; min-height: 230px; overflow: hidden; padding: 24px; border: 1px solid #3a3e37; border-radius: 18px; transition: border-color .2s, transform .2s; }.interest-grid article:hover { border-color: #d8f06a; transform: translateY(-5px); }.interest-number, .interest-grid h3, .interest-grid p { position: relative; z-index: 1; }.interest-number { color: #d8f06a; font: 11px 'DM Mono'; }.interest-crest { position: absolute; top: -12px; right: -60px; z-index: 0; width: 320px; height: 320px; clip-path: inset(0 0 25% 0); background: #d8f06a; opacity: .38; transform: rotate(10deg); -webkit-mask: url('/images/liverpool-liverbird.svg') center / contain no-repeat; mask: url('/images/liverpool-liverbird.svg') center / contain no-repeat; }.interest-gamepad { position: absolute; right: -4px; bottom: -25px; z-index: 0; width: 175px; height: 250px; color: #d8f06a; opacity: .25; transform: rotate(10deg); }.interest-goboard { position: absolute; right: -20px; bottom: -18px; z-index: 0; width: 205px; height: 205px; color: #d8f06a; opacity: .25; transform: rotate(10deg); }.interest-grid h3 { margin: 46px 0 15px; font-size: 28px; line-height: .98; letter-spacing: -.05em; }.interest-grid p { max-width: 235px; margin: 0; color: #92998d; font-size: 13px; line-height: 1.5; }.closing { padding-block: 190px 170px; border-bottom: 1px solid #2d302b; }.closing h2 { margin-bottom: 40px; font-size: clamp(60px, 8vw, 112px); }
+  .closing-links { display: flex; flex-wrap: wrap; gap: 12px; }.closing-links a { display: inline-flex; align-items: center; gap: 22px; padding: 14px 16px; border: 1px solid #4b5146; color: #d8f06a; font: 12px 'DM Mono'; transition: border-color .2s, background .2s, transform .2s; }.closing-links a:hover { border-color: #d8f06a; background: #d8f06a12; transform: translateY(-3px); }.closing-links span { font-size: 16px; }.site-footer { display: flex; align-items: center; padding-block: 32px 42px; color: #969d91; font: 11px 'DM Mono'; letter-spacing: .08em; }
+  @media (max-width: 700px) { .shell { width: min(100% - 32px, 540px); }.site-header { height: 72px; }.site-header nav { display: none; }.hero { min-height: auto; padding: 90px 0 80px; display: block; }.hero h1 { font-size: clamp(58px, 17vw, 90px); }.hero-art { height: 310px; margin-top: 55px; }.project-grid, .award-grid, .interest-grid { grid-template-columns: 1fr; }.project-card { min-height: 260px; }.section { padding-block: 95px 30px; }.section-heading { align-items: start; }.section-index { display: none; }.closing { padding-block: 130px; }.site-footer { flex-wrap: wrap; gap: 18px; } }
+  .interest-grid article > p { position: absolute; right: 24px; bottom: 24px; left: 24px; margin: 0; max-width: none; }
+  :global(body) { background: radial-gradient(circle at 78% 10%, #d8f06a13, transparent 25rem), radial-gradient(circle at 12% 45%, #f18a6809, transparent 20rem), #101110; }.hero { position: relative; }.hero-copy { position: relative; z-index: 1; }.hero h1 { text-shadow: 0 12px 45px #00000038; }.hero-art { overflow: hidden; border: 1px solid #3b4236; background-image: linear-gradient(#d8f06a0b 1px, transparent 1px), linear-gradient(90deg, #d8f06a0b 1px, transparent 1px); background-size: 28px 28px; }.hero-art::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 55% 49%, #d8f06a1c, transparent 33%); }.hero-art > * { z-index: 1; }.orbit-one { animation: drift 24s linear infinite; }.orbit-two { animation: drift 18s linear infinite reverse; }.project-card, .award-card, .interest-grid article { box-shadow: 0 10px 28px #00000018; } @keyframes drift { to { transform: rotate(332deg); } } @media (prefers-reduced-motion: reduce) { .orbit-one, .orbit-two { animation: none; } } @media (max-width: 700px) { .hero-art { margin-inline: -4px; } }
+  .hero-actions { gap: 12px; flex-wrap: wrap; }.hero-actions .button { min-height: 48px; padding: 12px 18px 12px 21px; border-radius: 999px; box-shadow: 0 8px 22px #d8f06a1c; }.hero-actions .button span { margin-left: 5px; }
+  .project-cta { font: 600 14px 'Noto Serif SC', serif; letter-spacing: .03em; }
+</style>
